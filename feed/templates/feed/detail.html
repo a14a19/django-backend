@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block title %}Custom Detail Title{% endblock %}
+
+{% block body %}
+    <!-- component -->
+    {% include "includes/post.html" with post=post %}
+    
+{% endblock body %}
