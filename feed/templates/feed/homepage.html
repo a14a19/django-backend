@@ -4,13 +4,11 @@
 {% block title %}Change title{% endblock %}
 
 {% block body %}
-    {% for post in posts %}
-
+    <div id="post-container">
+        {% for post in posts %}
         <!-- component from https://tailwindcomponents.com/component/post-artical -->
-
-        {% include "includes/post.html" with post=post show_detail_link=True %}
-
+            {% include "includes/post.html" with post=post show_detail_link=True %}
         <!-- {{post.text}} written at {{post.date}} -->
-        <hr>
-    {% endfor %}
+        {% endfor %}
+    </div>
 {% endblock %}
